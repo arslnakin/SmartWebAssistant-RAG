@@ -6,59 +6,59 @@ Bu depo, TMMOB Elektrik Mühendisleri Odası (EMO) İstanbul Şubesi için hazı
 
 ## 🌟 Öne Çıkan Özellikler
 
-> [!IMPORTANT]
-> **Not:** Bu repo şu an için webinar sunum materyallerini içermektedir. Projenin çalışan kaynak kodları, sunum sonrasında toplulukla paylaşılmak üzere eşzamanlı olarak yüklenecektir.
-
 - **RAG Mimarisi:** Harici bilgi tabanından (Knowledge Base) anlık veri çekerek güncel ve doğru yanıt üretimi.
-- **Vektör Veritabanı:** Semantik arama için optimize edilmiş veri saklama katmanı.
-- **Çoklu Model Desteği:** OpenRouter üzerinden Llama 3, Claude 3.5 ve GPT-4o entegrasyonu.
-- **Streaming (SSE):** Kullanıcı deneyimini iyileştiren token-bazlı anlık metin akışı.
-- **Agentic UI:** Fonksiyon çağırma (Tool Calling) ile web sitesi üzerinde aksiyon alabilen asistan.
+- **Vektör Veritabanı:** Semantik arama için optimize edilmiş veri saklama katmanı (ChromaDB).
+- **Çoklu Model Desteği:** OpenRouter üzerinden Qwen-3-Max, Gemini 2.0 ve GPT-4o entegrasyonu.
+- **Modern UI:** Next.js ve Tailwind CSS 4.0 ile güçlendirilmiş, responsive ve premium chatbot arayüzü.
+- **Agentic Özellikler:** Satış odaklı persona ve teknik dökümanlara sadık yanıt mekanizması.
 
 ## 🛠️ Teknoloji Yığını
 
-- **Backend:** FastAPI (Python)
-- **Frontend:** Vanilla JS, HTML5, CSS3
-- **LLM Orchestration:** OpenRouter API
-- **Vector Store:** ChromaDB / Pinecone
-- **Embeddings:** HuggingFace / OpenAI
+- **Backend:** FastAPI (Python 3.10+)
+- **Frontend:** Next.js 15, Tailwind CSS 4.0, Framer Motion
+- **LLM Orchestration:** OpenRouter API / LangChain
+- **Vector Store:** ChromaDB
+- **Embeddings:** HuggingFace Multilingual (Turkish Support)
 
 ## 📁 Proje Yapısı
 
 ```text
-├── server/             # FastAPI Backend
-│   ├── app.py          # Ana uygulama ve API uç noktaları
-│   ├── ingestion.py    # Veri işleme ve vektörleştirme (Chunking & Embedding)
-│   ├── database.py     # Vektör veritabanı bağlantısı
+├── chatbot-backend/    # FastAPI Backend
+│   ├── data/           # Bilgi tabanı dokümanları (PDF, Markdown)
+│   ├── main.py         # API ve Uygulama mantığı
+│   ├── rag_service.py  # Vektörleştirme ve Arama servisi
 │   └── requirements.txt
-├── client/             # Web Frontend
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-├── data/               # Bilgi tabanı dokümanları (PDF, Markdown)
-└── docs/               # Sunum ve teknik şemalar
+├── luxivolt-site/      # Next.js Frontend
+│   ├── src/            # Uygulama kaynak kodları
+│   └── package.json
+├── data/               # Veri seti dökümanları
+└── PROMPTS.md          # Geliştirme sürecinin promptları
 ```
 
 ## 🚀 Hızlı Başlangıç
 
 ### 1. Depoyu Klonlayın
 ```bash
-git clone https://github.com/akinarslan/SmartWebAssistant-RAG.git
+git clone https://github.com/arslnakin/SmartWebAssistant-RAG.git
 cd SmartWebAssistant-RAG
 ```
 
-### 2. Bağımlılıkları Yükleyin
+### 2. Backend'i Hazırlayın
 ```bash
-cd server
+cd chatbot-backend
+python -m venv venv
+# Windows: venv\Scripts\activate | macOS/Linux: source venv/bin/activate
 pip install -r requirements.txt
+# .env dosyasını oluşturun ve OPENROUTER_API_KEY ekleyin
+uvicorn main:app --reload --port 8000
 ```
 
-### 3. Ortam Değişkenlerini Ayarlayın
-`.env.example` dosyasını `.env` olarak kopyalayın ve OpenRouter API anahtarınızı ekleyin.
-
-### 4. Uygulamayı Çalıştırın
+### 3. Frontend'i Çalıştırın
 ```bash
-uvicorn app:app --reload
+cd ../luxivolt-site
+npm install
+# Uygulamayı başlatın (localhost:3000)
+npm run dev
 ```
 
 ## 👨‍💻 Hazırlayan
