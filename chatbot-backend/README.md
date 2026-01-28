@@ -210,6 +210,3 @@ Yeni döküman eklemek için:
 1. Dosyayı `data/` klasörüne kopyalayın (`.md`, `.pdf`, `.txt` desteklenir)
 2. API'yi yeniden başlatın veya `/index` endpoint'ini çağırın
 
-## 📝 Lisans
-
-© 2026 Luxivolt Mühendislik
