@@ -3,6 +3,7 @@
 **Yapay Zekâ ile Dijital Dönüşüm: Kişiselleştirilmiş Akıllı Web Asistanları**
 
 Bu depo, TMMOB Elektrik Mühendisleri Odası (EMO) İstanbul Şubesi için hazırlanan "Kişiselleştirilmiş Akıllı Web Asistanları" webinarı kapsamında geliştirilen RAG (Retrieval-Augmented Generation) tabanlı asistan projesinin kaynak kodlarını ve dokümantasyonunu içerir.
+<img width="1080" height="1350" alt="image" src="https://github.com/user-attachments/assets/6fc5146b-7214-4c7b-805d-949a6cc4201d" />
 
 ## 🌟 Öne Çıkan Özellikler
 
