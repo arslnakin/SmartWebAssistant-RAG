@@ -62,7 +62,7 @@ npm run dev
 ```
 
 ## 👨‍💻 Hazırlayan
-**Akın ARSLAN** - *IoT Proje Mühendisi*
+**Akın ARSLAN,MSc(c)** - *IoT Proje Mühendisi*
 LinkedIn: [akinarslan](https://www.linkedin.com/in/akinarslan)
 
 ## 📄 Lisans
