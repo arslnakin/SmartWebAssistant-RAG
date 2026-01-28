@@ -203,12 +203,6 @@ Varsayılan olarak `sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2`
 - ✅ CPU üzerinde çalışır
 - ✅ Hızlı ve verimli
 
-## 🔒 Güvenlik Notları
-
-- `.env` dosyasını asla Git'e commit etmeyin
-- `chroma_db/` klasörünü Git'e commit etmeyin
-- Production'da `DEBUG=False` yapın
-- `allowed_origins` listesini kısıtlayın
 
 ## 📝 Döküman Ekleme
 
